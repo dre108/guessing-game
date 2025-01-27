@@ -5,12 +5,10 @@ let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 let guess;
 let guesses = 0;
 
-console.log(`Random Number: ${randomNumber}`);
 
 for (;;) {
   // Prompt the user to guess
   guess = parseInt(prompt("Guess a number between 1 and 10:"));
-  console.log("🚀 ~ randomNumber:", randomNumber);
 
   // Validating input
   if (isNaN(guess)) {
@@ -29,10 +27,8 @@ for (;;) {
   }
   // Logic of the game
   if (guess < randomNumber) {
-    console.log("Too low! Random number:", randomNumber);
     alert("Too low!");
   } else if (guess > randomNumber) {
-    console.log("Too high! Random number:", randomNumber);
     alert("Too high!");
   } else {
     alert(`Congratulations! You guessed the number in ${guesses} tries.`);
